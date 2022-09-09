@@ -1,0 +1,276 @@
+.frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 2px;
+    box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background: black;
+    color: #333;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.canvas {
+    width: 180px;
+    height: 180px;
+    /* border: solid 1px black; */
+    border-radius: 50%;
+    clip-path: circle(50%);
+    animation: soil 6s linear 0s infinite forwards;
+}
+
+.sun-container {
+    top: 40px;
+    left: 10px;
+    position: absolute;
+    width: 180px;
+    height: 240px;
+    /* border: solid 1px black; */
+    animation: sun-rotation 6s ease-in 0s infinite forwards;
+}
+
+.sun {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: yellow;
+    box-shadow: 0px 0px 10px 10px yellow;
+}
+
+.sky {
+    width: 180px;
+    height: 120px;
+    animation: sky 6s linear 0s infinite forwards;
+}
+
+.left-side {
+    width: 80px;
+    height: 60px;
+    position: absolute;
+    top: 60px;
+    left: 25px;
+    z-index: 99;
+    background-color: #ddd;
+    clip-path: polygon(80% 0%, 0% 100%, 100% 100%);
+    animation: left-side 6s ease-in 0s infinite forwards;
+}
+
+.right-side {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 60px;
+    left: 88px;
+    z-index: 98;
+    background-color: #888;
+    clip-path: polygon(0% 0%, 0% 100%, 100% 100%);
+    animation: right-side 6s ease-in 0s infinite forwards;
+}
+
+.shadow {
+    position: absolute;
+    width: 180px;
+    height: 40px;
+    background-color: #3338;
+    animation: shadow 6s linear 0s infinite forwards;
+}
+
+@keyframes sun-rotation {
+    from { transform: rotate(-40deg);}
+    to { transform: rotate(320deg);}
+}
+
+@keyframes left-side {
+    0% {
+        background-color: #444;
+    }
+
+    5% {
+        background-color: #bbb;
+    }
+
+    10% {
+        background-color: #ccc;
+    }
+
+    20% {
+        background-color: #ddd;
+    }
+
+    30% {
+        background-color: #cfcfcf;
+    }
+
+    40% {
+        background-color: #ccc;
+    }
+
+    50% {
+        background-color: #bbb;
+    }
+
+    60% {
+        background-color: #bbb;
+    }
+
+    70% {
+        background-color: #333;
+    }
+
+    95% {
+        background-color: #333;
+    }
+
+    100% {
+        background-color: #444;
+    }
+}
+
+@keyframes right-side {
+    0% {
+        background-color: #444;
+    }
+
+    10% {
+        background-color: #888;
+    }
+
+    20% {
+        background-color: #8a8a8a;
+    }
+
+    30% {
+        background-color: #aaa;
+    }
+
+    40% {
+        background-color: #bbb;
+    }
+
+    50% {
+        background-color: #ddd;
+    }
+
+    60% {
+        background-color: #ccc;
+    }
+
+    70% {
+        background-color: #333;
+    }
+
+    95% {
+        background-color: #333;
+    }
+
+    100% {
+        background-color: #444;
+    }
+}
+
+@keyframes shadow {
+    0% {
+        clip-path: polygon(14% 0%, 82% 0%, 100% 0%);
+    }
+
+    25% {
+        clip-path: polygon(14% 0%, 82% 0%, 80% 40%);
+    }
+    
+    40% {
+        clip-path: polygon(14% 0%, 82% 0%, 40% 20%);
+    }
+    
+    50% {
+        clip-path: polygon(14% 0%, 82% 0%, 10% 40%);
+    }
+    
+    60% {
+        clip-path: polygon(14% 0%, 82% 0%, 0% 0%);
+    }
+    
+    70% {
+        clip-path: polygon(14% 0%, 82% 0%, 0% 0%);
+    }
+    
+    95% {
+        clip-path: polygon(14% 0%, 82% 0%, 0% 0%);
+    }
+    
+    100% {
+        clip-path: polygon(14% 0%, 82% 0%, 100% 0%);
+    }
+}
+
+@keyframes sky {
+    0% {
+        background-color: #98d;
+    }
+
+    40% {
+        background-color: skyblue;
+    }
+
+    50% {
+        background-color: skyblue;
+    }
+
+    60% {
+        background-color: #635;
+    }
+
+    70% {
+        background-color: #001;
+    }
+
+    95% {
+        background-color: #102;
+    }
+
+    100% {
+        background-color: #98d;
+    }
+}
+
+@keyframes soil {
+    0% {
+        background-color: #ef9;
+    }
+
+    40% {
+        background-color: #ef9;
+    }
+
+    50% {
+        background-color: #ef9;
+    }
+
+    60% {
+        background-color: #132;
+    }
+
+    70% {
+        background-color: #121;
+    }
+
+    95% {
+        background-color: #121;
+    }
+
+    100% {
+        background-color: #ef9;
+    }
+}
