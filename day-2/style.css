@@ -1,0 +1,166 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+.frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 2px;
+    box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-image: linear-gradient(45deg, #5588aa, #88ffaa);
+    color: #333;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#button {
+    position: relative;
+    cursor: pointer;
+}
+
+.bar {
+    border-radius: 3px;
+    width: 80px;
+    height: 8px;
+    margin: 14px 0;
+    background-color: white;
+    box-shadow: 0 0 13px 0 #0004;
+}
+
+@keyframes anim-middle-open {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(0);
+    }
+}
+
+@keyframes anim-top-open {
+    0% {
+        transform: translate(0, 0);
+    }
+    
+    25% {
+        transform: translate(0, 22px);
+    }
+
+    50% {
+        transform: translate(0, 22px);
+    }
+
+    100% {
+        transform: translate(0, 22px) rotate(45deg);
+    }
+}
+
+@keyframes anim-top-close {
+    0% {
+        transform: translate(0, 22px) rotate(45deg);
+    }
+
+    25% {
+            transform: translate(0, 22px) rotate(45deg);
+    }
+
+    75% {
+        transform: translate(0, 22px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes anim-middle-close {
+    0% {
+        transform: scale(0);
+    }
+
+    75% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes anim-bottom-open {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(0, -22px);
+    }
+
+    50% {
+        transform: translate(0, -22px);
+    }
+
+    100% {
+        transform: translate(0, -22px) rotate(-225deg);
+    }
+}
+
+@keyframes anim-bottom-close {
+    0% {
+            transform: translate(0, -22px) rotate(-225deg);
+    }
+    
+    25% {
+        transform: translate(0, -22px) rotate(-225deg);
+    }
+
+    75% {
+        transform: translate(0, -22px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+.closed .bar-middle {
+    animation: anim-middle-close 700ms ease-out 0s 1 forwards;
+    animation-fill-mode: forwards;
+}
+
+.opened .bar-middle {
+    animation: anim-middle-open 700ms ease-out 0s 1 forwards;
+    animation-fill-mode: forwards;
+}
+
+.closed .bar-top {
+    animation: anim-top-close 700ms ease-out 0s 1 forwards;
+    animation-fill-mode: forwards;
+}
+
+.opened .bar-top {
+    animation: anim-top-open 700ms ease-out 0s 1 forwards;
+    animation-fill-mode: forwards;
+}
+
+.closed .bar-bottom {
+    animation: anim-bottom-close 700ms ease-out 0s 1 forwards;
+    animation-fill-mode: forwards;
+}
+
+.opened .bar-bottom {
+    animation: anim-bottom-open 700ms ease-out 0s 1 forwards;
+    animation-fill-mode: forwards;
+}

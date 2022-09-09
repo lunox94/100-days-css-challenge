@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="frame">
+      <div class="center">
+        <div id="button" onclick="toggle()">
+          <div id="top" class="bar bar-top"></div>
+          <div id="middle" class="bar bar-middle"></div>
+          <div class="bar bar-bottom"></div>
+        </div>
+      </div>
+    </div>
+    <script>
+      let opened = false;
+
+      function toggle() {
+        opened = !opened;
+
+        const button = document.getElementById("button");
+
+        // const middle = document.getElementById("middle");
+
+        // void middle.offsetWidth;
+
+        button.className = opened ? "opened" : "closed";
+      }
+    </script>
+  </body>
+</html>
