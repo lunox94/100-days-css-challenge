@@ -1,0 +1,125 @@
+.frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 2px;
+    box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background: rgb(220, 100, 100);
+    color: #333;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+}
+
+.container {
+    position: absolute;
+    display: flex;
+    height: 200px;
+    width: 200px;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle-1 {
+    transform: scale(0);
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 50%;
+    animation: circle-1 2s ease-in-out 0s infinite alternate;
+}
+
+.circle-2 {
+    transform: scale(0);
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border-radius: 50%;
+    animation: circle-2 2s ease-in-out 0s infinite alternate;
+}
+
+.circle-3 {
+    transform: scale(0);
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    animation: circle-3 2s ease-in-out 0s infinite alternate;
+}
+
+.circle-4 {
+    transform: scale(0);
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    animation: circle-4 2s ease-in-out 0s infinite alternate;
+}
+
+@keyframes circle-1 {
+    0% {
+        transform: scale(0);
+    box-shadow: 4px 4px 10px 3px #3338;
+    }
+
+    100% {
+        transform: scale(1);
+    box-shadow: 4px 4px 10px 7px #3334;
+    }
+}
+
+@keyframes circle-2 {
+
+    0%,
+    40% {
+        transform: scale(0);
+    box-shadow: 4px 4px 10px 3px #3338;
+    }
+
+    100% {
+        transform: scale(1);
+    box-shadow: 4px 4px 10px 3px #3334;
+    }
+}
+
+@keyframes circle-3 {
+
+    0%,
+    70% {
+        transform: scale(0);
+    box-shadow: 4px 4px 10px 3px #3338;
+    }
+
+    100% {
+        transform: scale(1);
+    box-shadow: 4px 4px 10px 3px #3334;
+    }
+}
+
+@keyframes circle-4 {
+
+    0%,
+    80% {
+        transform: scale(0);
+        box-shadow: 4px 4px 10px 3px #3338;
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 4px 4px 10px 3px #3334;
+    }
+}
