@@ -1,0 +1,178 @@
+.frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 2px;
+    box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-image: linear-gradient(90deg, #f96, #b73);
+    color: #333;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 320px;
+    box-shadow: 6px 6px 14px 2px #6668;
+    display: flex;
+    background-color: white;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.outer-circle {
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    width: 82px;
+    height: 82px;
+    border: solid brown 1px;
+    border-color: brown brown brown transparent;
+    transition: transform 1500ms ease-in-out;
+}
+
+.inner-circle {
+    display: block;
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    border-radius: 50%;
+    width: 76px;
+    height: 76px;
+    border: solid brown 1px;
+    border-color: brown transparent brown brown;
+    transition: transform 1500ms ease-in-out;
+}
+
+.avatar-container {
+    cursor: pointer;
+    position: relative;
+    width: 82px;
+    height: 82px;
+}
+
+.avatar-container:hover .outer-circle {
+    transform: rotate(360deg) scale(1.05);
+}
+
+.avatar-container:hover .inner-circle {
+    transform: rotate(-360deg) scale(1.05);
+}
+
+img {
+    position: absolute;
+    border-radius: 50%;
+    left: 7px;
+    top: 7px;
+}
+
+.left-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px 16px;
+    width: 168px;
+}
+
+.user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.user .info {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: brown;
+    gap: 4px;
+}
+
+.name {
+    font-size: .9em;
+    font-weight: 600;
+    letter-spacing: .12em;
+}
+
+.profession {
+    font-size: .7em;
+    font-weight: lighter;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 32px;
+    width: 140px;
+    /* padding: 0 8px; */
+    border: solid brown 1px;
+    border-radius: 16px;
+    text-align: center;
+    font-size: .78em;
+    color: brown;
+    font-weight: bold;
+    transition: color ease 500ms, background-color ease 500ms;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: brown;
+    color: white;
+}
+
+.right-side {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    color: brown;
+    gap: 1px;
+}
+
+.box {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5e8df;
+    cursor: pointer;
+    transition: background-color 500ms ease;
+}
+
+.box .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box .info :nth-child(1) {
+    font-size: 1.1em;
+    color: rgb(129, 33, 33)
+}
+
+.box .info :nth-child(2) {
+    font-size: .7em;
+    font-weight: lighter;
+}
+
+.box:hover {
+    background-color: #f4d5c0;
+}
