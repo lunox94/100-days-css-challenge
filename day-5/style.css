@@ -1,0 +1,241 @@
+.frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 2px;
+    box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-image: linear-gradient(45deg, #697, #3da);
+    color: #333;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 320px;
+    height: 220px;
+    box-shadow: 12px 12px 16px 4px #3336;
+    background-color: white;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f1bA64;
+    color: white;
+    padding: 12px;
+    font-size: .85em;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+}
+
+.title .date {
+    font-size: .8em;
+    font-weight: lighter;
+}
+
+.revenue {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    text-align: right;
+}
+
+.revenue .text {
+    font-size: .8em;
+    font-weight: lighter;
+}
+
+.legend {
+    display: flex;
+    justify-content: end;
+    gap: 16px;
+    font-size: .55em;
+    font-weight: lighter;
+    padding: 8px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.indicator {
+    width: 10px;
+    height: 3px;
+    border-radius: 2px;
+}
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: rgb(70, 150, 225);
+}
+
+.days {
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    justify-content: space-between;
+    width: 304px;
+    padding: 16px 8px;
+    font-size: .65em;
+    color: #555;
+    font-weight: lighter;
+}
+
+.graphic {
+    bottom: 36px;
+    position: absolute;
+    height: 200px;
+    width: 300px;
+}
+
+.dot {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.dot-1 {
+    left: 24px;
+    top: 160px;
+    background-color: red;
+}
+
+.dot-2 {
+    left: 70px;
+    top: 110px;
+    background-color: red;
+}
+
+.dot-3 {
+    left: 116px;
+    top: 120px;
+    background-color: red;
+}
+
+.dot-4 {
+    left: 162px;
+    top: 110px;
+    background-color: red;
+}
+
+.dot-5 {
+    left: 208px;
+    top: 150px;
+    background-color: red;
+}
+
+.dot-6 {
+    left: 254px;
+    top: 160px;
+    background-color: red;
+}
+
+.dot-7 {
+    left: 300px;
+    top: 120px;
+    background-color: red;
+}
+
+.dot-8 {
+    left: 24px;
+    top: 180px;
+    background-color: rgb(70, 150, 225);
+}
+
+.dot-9 {
+    left: 70px;
+    top: 175px;
+    background-color: rgb(70, 150, 225);
+}
+
+.dot-10 {
+    left: 116px;
+    top: 190px;
+    background-color: rgb(70, 150, 225);
+}
+
+.dot-11 {
+    left: 162px;
+    top: 180px;
+    background-color: rgb(70, 150, 225);
+}
+
+.dot-12 {
+    left: 208px;
+    top: 190px;
+    background-color: rgb(70, 150, 225);
+}
+
+.dot-13 {
+    left: 254px;
+    top: 195px;
+    background-color: rgb(70, 150, 225);
+}
+
+.dot-14 {
+    left: 300px;
+    top: 180px;
+    background-color: rgb(70, 150, 225);
+}
+
+.tooltip {
+    padding: 4px;
+    position: absolute;
+    font-size: .75em;
+    border-radius: 4px;
+    color: white;
+    left: 3px;
+    transform: translate(-50%, -10px) rotate(45deg);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity ease-in 200ms, transform ease-in 200ms;
+}
+
+.tooltip::after {
+    position: absolute;
+    content: '';
+    width: 6px;
+    height: 6px;
+    bottom: -3px;
+    left: calc(50% - 3px);
+    transform: rotate(45deg);
+}
+
+.tooltip.red:after{
+    background-color: red;
+}
+
+.tooltip.blue:after {
+    background-color: rgb(70, 150, 225);
+}
+
+.dot:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%, -27px) rotate(0deg);
+}
