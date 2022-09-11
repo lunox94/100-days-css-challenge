@@ -1,0 +1,96 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="frame">
+      <div class="center">
+        <div id="panel" class="panel">
+          <div class="header">
+            <input id="search" placeholder="Search..." />
+            <div class="button" onclick="toggleMenu()">
+              <div></div>
+              <div></div>
+            </div>
+            <div>Notifications</div>
+            <div class="search-button" onclick="toggleSearch()"></div>
+          </div>
+          <div class="content">
+            <div class="line"></div>
+            <div class="notification">
+              <div class="circle"></div>
+              <div class="info">
+                <div class="time">9:24 AM</div>
+                <div class="text">
+                  <strong>John Walker</strong> posted a photo on your wall.
+                </div>
+              </div>
+            </div>
+            <div class="notification" style="animation-delay: 150ms">
+              <div class="circle"></div>
+              <div class="info">
+                <div class="time">9:24 AM</div>
+                <div class="text">
+                  <strong>John Walker</strong> posted a photo on your wall.
+                </div>
+              </div>
+            </div>
+            <div class="notification" style="animation-delay: 300ms">
+              <div class="circle"></div>
+              <div class="info">
+                <div class="time">9:24 AM</div>
+                <div class="text">
+                  <strong>Luke Wayne</strong> added you as friend.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="menu" class="menu">
+          <div class="menu-content">
+            <div class="item">Dashboard</div>
+            <div class="item">Profile</div>
+            <div class="item">Notifications</div>
+            <div class="item">Messages</div>
+            <div class="item">Settings</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let active = false;
+      let searchActive = false;
+
+      function toggleMenu() {
+        active = !active;
+
+        const panel = document.getElementById("panel");
+        const menu = document.getElementById("menu");
+
+        if (active) {
+          panel.classList.add("menu-active");
+          menu.classList.add("active");
+        } else {
+          panel.classList.remove("menu-active");
+          menu.classList.remove("active");
+        }
+      }
+
+      function toggleSearch() {
+        searchActive = !searchActive;
+
+        const search = document.getElementById("search");
+
+        if (searchActive) {
+          search.classList.remove("deactive");
+          search.classList.add("active");
+        } else {
+          search.classList.remove("active");
+          search.classList.add("deactive");
+        }
+      }
+    </script>
+  </body>
+</html>
