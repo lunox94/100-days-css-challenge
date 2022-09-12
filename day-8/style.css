@@ -1,0 +1,241 @@
+.frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 2px;
+    box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background: black;
+    filter: contrast(25);
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+}
+
+.ball {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 50%;
+    filter: blur(15px);
+    border: solid red 3px;
+}
+
+.meta-1 {
+    width: 100px;
+    height: 14px;
+    position: relative;
+    top: -30px;
+    left: 20px;
+    animation: rotate 4s linear 0s infinite normal none;
+}
+
+.meta-1::after {
+    position: absolute;
+    content: "";
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    filter: blur(5px);
+}
+
+.meta-2 {
+    width: 200px;
+    height: 10px;
+    position: relative;
+    left: -120px;
+    top: -50px;
+    animation: rotate 4s ease-in 0s infinite normal none;
+}
+
+.meta-2::after {
+    position: absolute;
+    content: "";
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: 0px;
+    filter: blur(5px);
+}
+
+.meta-3 {
+    width: 240px;
+    height: 10px;
+    position: relative;
+    left: 0px;
+    top: -60px;
+    animation: rotate 3s linear 1s infinite normal none;
+}
+
+.meta-3::after {
+    position: absolute;
+    content: "";
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    left: 10px;
+    filter: blur(5px);
+}
+
+.meta-4 {
+    width: 220px;
+    height: 30px;
+    position: relative;
+    left: 0px;
+    top: -60px;
+    transform-origin: 100px -10px;
+    animation: rotate 3300ms ease-out 1s infinite normal none;
+}
+
+.meta-4::after {
+    position: absolute;
+    content: "";
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    left: 10px;
+    filter: blur(5px);
+}
+
+.meta-5 {
+    width: 220px;
+    height: 30px;
+    position: absolute;
+    left: 10px;
+    top: 20px;
+    transform-origin: 60px 100px;
+    animation: rotate 3300ms linear 1100ms infinite normal none;
+}
+
+.meta-5::after {
+    position: absolute;
+    content: "";
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    left: 10px;
+    filter: blur(5px);
+}
+
+.meta-6 {
+    width: 200px;
+    height: 50px;
+    position: absolute;
+    left: 40px;
+    top: 40px;
+    transform-origin: 40px 20px;
+    animation: rotate 3800ms linear 1300ms infinite normal none;
+}
+
+.meta-6::after {
+    position: absolute;
+    content: "";
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 10px;
+    filter: blur(5px);
+}
+
+.meta-7 {
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    left: -40px;
+    top: 40px;
+    animation: rotate 2000ms linear 1300ms infinite normal none;
+}
+
+.meta-7::after {
+    position: absolute;
+    content: "";
+    background-color: white;
+    z-index: 100;
+    border-radius: 50%;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    right: 10px;
+    filter: blur(5px);
+}
+
+.meta-8 {
+    width: 100px;
+    height: 10px;
+    position: absolute;
+    left: -40px;
+    top: 40px;
+    animation: rotate 7000ms linear 500ms infinite normal none;
+}
+
+.meta-8::after {
+    position: absolute;
+    content: "";
+    background-color: white;
+    z-index: 100;
+    border-radius: 50%;
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    right: 0px;
+    filter: blur(5px);
+}
+
+.super-meta {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    animation: rotate 2s linear 0s infinite normal none;
+}
+
+.super-meta.super-meta-2 {
+    top: 20px;
+    left: -10px;
+}
+
+.super-meta::after {
+    position: absolute;
+    content: "";
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    right: 20px;
+    filter: blur(10px);
+    border: solid red 2px;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+
+    to {
+        transform: rotate(360deg) translate3d(0, 0, 0);
+    }
+}
